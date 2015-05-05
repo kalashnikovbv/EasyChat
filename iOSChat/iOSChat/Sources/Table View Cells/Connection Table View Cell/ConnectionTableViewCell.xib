@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConnectionCell" id="KGk-i7-Jjw" customClass="ConnectionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PeerName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vA-1S-5bq">
+                        <rect key="frame" x="8" y="8" width="148" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PeerStatus" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-Jo-zFX">
+                        <rect key="frame" x="164" y="8" width="148" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="s0T-Jo-zFX" firstAttribute="leading" secondItem="4vA-1S-5bq" secondAttribute="trailing" constant="8" symbolic="YES" id="4D2-h3-oIA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="s0T-Jo-zFX" secondAttribute="bottom" id="5H9-Or-aUK"/>
+                    <constraint firstItem="4vA-1S-5bq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8jK-Ml-pZC"/>
+                    <constraint firstItem="4vA-1S-5bq" firstAttribute="width" secondItem="s0T-Jo-zFX" secondAttribute="width" id="Do9-4Y-39v"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4vA-1S-5bq" secondAttribute="bottom" id="MpS-nM-fd7"/>
+                    <constraint firstItem="4vA-1S-5bq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="XGv-Ax-rbX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="s0T-Jo-zFX" secondAttribute="trailing" id="tug-qW-FJQ"/>
+                    <constraint firstItem="s0T-Jo-zFX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="u0d-0h-Zvn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="peerNameLabel" destination="4vA-1S-5bq" id="8Wq-5C-isb"/>
+                <outlet property="peerStatusLabel" destination="s0T-Jo-zFX" id="sKD-e3-exX"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

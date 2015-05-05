@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Message" representedClassName="Message" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sendingPeer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Peer" inverseName="messages" inverseEntity="Peer" syncable="YES"/>
+    </entity>
+    <entity name="Peer" representedClassName="Peer" syncable="YES">
+        <attribute name="peerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="sendingPeer" inverseEntity="Message" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Message" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Peer" positionX="-279" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
