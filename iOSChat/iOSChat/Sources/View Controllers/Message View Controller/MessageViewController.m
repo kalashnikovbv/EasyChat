@@ -17,6 +17,9 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString * backgroundImageName = [NSString stringWithFormat: @"background"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: backgroundImageName]];
 
     return;
 }
@@ -44,6 +47,16 @@
     self.dateLabel.text = date;
     
     return;
+}
+
+- (IBAction) doneButtonPressed: (id) sender
+{
+    [self.navigationController popViewControllerAnimated: YES];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

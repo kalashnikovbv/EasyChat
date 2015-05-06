@@ -18,54 +18,70 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="messageTextView" translatesAutoresizingMaskIntoConstraints="NO" id="8nx-tK-K4b">
-                    <rect key="frame" x="20" y="78" width="280" height="490"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nx-tK-K4b">
+                    <rect key="frame" x="20" y="107" width="280" height="461"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-9p-A0L">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999999999999991" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-9p-A0L">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <items>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="NVg-wX-IRt"/>
-                        <barButtonItem style="done" systemItem="done" id="c2z-Ae-4en"/>
+                        <barButtonItem style="done" systemItem="done" id="c2z-Ae-4en">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" id="PGK-7l-Jim"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="kU1-8t-4NK"/>
                     </items>
                 </toolbar>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-ml-XU4">
                     <rect key="frame" x="20" y="20" width="60" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="senderLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Je-z8-XhE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Je-z8-XhE">
                     <rect key="frame" x="88" y="20" width="212" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fq-g7-eIa">
                     <rect key="frame" x="20" y="49" width="41" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="dateLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-uG-AsL">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-uG-AsL">
                     <rect key="frame" x="69" y="49" width="231" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-Xa-H9g">
+                    <rect key="frame" x="20" y="78" width="280" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="8nx-tK-K4b" firstAttribute="top" secondItem="vFn-Xa-H9g" secondAttribute="bottom" constant="8" symbolic="YES" id="1o7-cw-gej"/>
+                <constraint firstItem="vFn-Xa-H9g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="9PH-9C-zcH"/>
                 <constraint firstAttribute="trailing" secondItem="6Je-z8-XhE" secondAttribute="trailing" constant="20" symbolic="YES" id="C7k-rQ-8gn"/>
                 <constraint firstItem="6Je-z8-XhE" firstAttribute="leading" secondItem="F6T-ml-XU4" secondAttribute="trailing" constant="8" symbolic="YES" id="DVc-D3-Opa"/>
                 <constraint firstItem="4ij-uG-AsL" firstAttribute="leading" secondItem="7fq-g7-eIa" secondAttribute="trailing" constant="8" symbolic="YES" id="Dzd-3P-YYN"/>
                 <constraint firstItem="F6T-ml-XU4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="EN8-XP-3or"/>
                 <constraint firstAttribute="trailing" secondItem="2x7-9p-A0L" secondAttribute="trailing" id="Fpz-zx-hsI"/>
+                <constraint firstItem="F6T-ml-XU4" firstAttribute="height" secondItem="6Je-z8-XhE" secondAttribute="height" id="Jjc-f1-R6k"/>
                 <constraint firstItem="6Je-z8-XhE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="LX8-KB-iB1"/>
+                <constraint firstItem="7fq-g7-eIa" firstAttribute="height" secondItem="4ij-uG-AsL" secondAttribute="height" id="MgC-nm-CIS"/>
                 <constraint firstItem="4ij-uG-AsL" firstAttribute="top" secondItem="6Je-z8-XhE" secondAttribute="bottom" constant="8" symbolic="YES" id="O1l-gW-0WO"/>
+                <constraint firstAttribute="trailing" secondItem="vFn-Xa-H9g" secondAttribute="trailing" constant="20" symbolic="YES" id="O6u-3C-ddi"/>
                 <constraint firstAttribute="trailing" secondItem="8nx-tK-K4b" secondAttribute="trailing" constant="20" symbolic="YES" id="OaB-0a-Czw"/>
                 <constraint firstItem="F6T-ml-XU4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="VZB-22-EeS"/>
                 <constraint firstItem="7fq-g7-eIa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="bfC-DD-0VU"/>
@@ -74,8 +90,8 @@
                 <constraint firstAttribute="bottom" secondItem="2x7-9p-A0L" secondAttribute="bottom" id="hF9-nc-JkN"/>
                 <constraint firstAttribute="trailing" secondItem="4ij-uG-AsL" secondAttribute="trailing" constant="20" symbolic="YES" id="hIH-Ci-vXF"/>
                 <constraint firstItem="7fq-g7-eIa" firstAttribute="top" secondItem="F6T-ml-XU4" secondAttribute="bottom" constant="8" symbolic="YES" id="hR6-Et-nbS"/>
+                <constraint firstItem="vFn-Xa-H9g" firstAttribute="top" secondItem="4ij-uG-AsL" secondAttribute="bottom" constant="8" symbolic="YES" id="jjk-oT-gtQ"/>
                 <constraint firstItem="8nx-tK-K4b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="n0R-xM-ecV"/>
-                <constraint firstItem="8nx-tK-K4b" firstAttribute="top" secondItem="4ij-uG-AsL" secondAttribute="bottom" constant="8" symbolic="YES" id="rLd-3A-wTD"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="219" y="345"/>

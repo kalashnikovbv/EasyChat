@@ -10,6 +10,7 @@
 #import "ConnectionsViewController.h"
 #import "AppDelegate.h"
 #import "MessageTableViewCell.h"
+#import "MessageViewController.h"
 
 #import "Peer.h"
 #import "Message.h"
@@ -24,6 +25,8 @@ NSString * const kMessageCellID = @"MessageCell";
 
 @property (retain, nonatomic) IBOutlet UITextField * messageTextField;
 @property (retain, nonatomic) IBOutlet UITableView * messagesTable;
+
+@property (retain, nonatomic) MessageViewController * messageViewController;
 
 @end
 
@@ -73,6 +76,17 @@ NSString * const kMessageCellID = @"MessageCell";
     }
     
     return _dateFormatter;
+}
+
+- (MessageViewController *) messageViewController
+{
+    if (nil == _messageViewController)
+    {
+        _messageViewController = [[MessageViewController alloc] init];
+        [_messageViewController view];
+    }
+    
+    return _messageViewController;
 }
 
 - (void) dealloc
@@ -196,6 +210,21 @@ NSString * const kMessageCellID = @"MessageCell";
 - (CGFloat) tableView: (UITableView *) tableView heightForHeaderInSection: (NSInteger) section
 {
     return 5.0;
+}
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
+{
+    Message * message = [[self fetchedResultsController] fetchedObjects][indexPath.section];
+    
+    [self.navigationController pushViewController: [self messageViewController] animated: YES];
+    
+    [[self messageViewController] setMessageText: message.text
+                                          date: [[self dateFormatter] stringFromDate: message.date]
+                                     andSender: message.sendingPeer.peerID];
+    
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    
+    return;
 }
 
 #pragma mark - Fetched Results Controller Delegate

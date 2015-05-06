@@ -281,6 +281,13 @@ NSString * const kConnectionCellID = @"ConnectionCell";
     return cell;
 }
 
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
+{
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    
+    return;
+}
+
 #pragma mark - Fetched Results Controller Delegate
 
 - (void) controllerDidChangeContent: (NSFetchedResultsController *) controller
