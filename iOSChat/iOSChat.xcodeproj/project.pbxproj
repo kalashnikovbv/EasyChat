@@ -42,6 +42,8 @@
 		4386F1CC1AD9386C00EC4112 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386F1CA1AD9386C00EC4112 /* ChatViewController.m */; };
 		4386F1CD1AD9386C00EC4112 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4386F1CB1AD9386C00EC4112 /* ChatViewController.xib */; };
 		4386F1CF1AD93BED00EC4112 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386F1CE1AD93BED00EC4112 /* MultipeerConnectivity.framework */; };
+		43A106AA1AF9FF6100AB4745 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A106A81AF9FF6100AB4745 /* MessageViewController.m */; };
+		43A106AB1AF9FF6100AB4745 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A106A91AF9FF6100AB4745 /* MessageViewController.xib */; };
 		43F965751AE635F200013578 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F965731AE635F200013578 /* ConnectionsViewController.m */; };
 		43F965761AE635F200013578 /* ConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F965741AE635F200013578 /* ConnectionsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -105,6 +107,9 @@
 		4386F1CA1AD9386C00EC4112 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		4386F1CB1AD9386C00EC4112 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		4386F1CE1AD93BED00EC4112 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		43A106A71AF9FF6100AB4745 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		43A106A81AF9FF6100AB4745 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		43A106A91AF9FF6100AB4745 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		43F965721AE635F200013578 /* ConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsViewController.h; sourceTree = "<group>"; };
 		43F965731AE635F200013578 /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
 		43F965741AE635F200013578 /* ConnectionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsViewController.xib; sourceTree = "<group>"; };
@@ -321,6 +326,7 @@
 		4386F1A41AD935F900EC4112 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				43A106A61AF9FF1800AB4745 /* Message View Controller */,
 				43F965711AE6359D00013578 /* Connections View Controller */,
 				4386F1C81AD9383600EC4112 /* Chat View Controller */,
 				4386F1B01AD9366400EC4112 /* Main View Controller */,
@@ -349,6 +355,17 @@
 			);
 			name = "Chat View Controller";
 			path = "iOSChat/Sources/View Controllers/Chat View Controller";
+			sourceTree = SOURCE_ROOT;
+		};
+		43A106A61AF9FF1800AB4745 /* Message View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43A106A71AF9FF6100AB4745 /* MessageViewController.h */,
+				43A106A81AF9FF6100AB4745 /* MessageViewController.m */,
+				43A106A91AF9FF6100AB4745 /* MessageViewController.xib */,
+			);
+			name = "Message View Controller";
+			path = "iOSChat/Sources/View Controllers/Message View Controller";
 			sourceTree = SOURCE_ROOT;
 		};
 		43F965711AE6359D00013578 /* Connections View Controller */ = {
@@ -456,6 +473,7 @@
 				4361EB021AEECDD4000AAAC0 /* Icon-40@3x.png in Resources */,
 				4361EB111AEECE06000AAAC0 /* launch640-1136.png in Resources */,
 				4361EB071AEECDD4000AAAC0 /* Icon-Small.png in Resources */,
+				43A106AB1AF9FF6100AB4745 /* MessageViewController.xib in Resources */,
 				43366CFE1AE7AE0C00F9ECC6 /* ConnectionTableViewCell.xib in Resources */,
 				4361EB121AEECE06000AAAC0 /* launch768-1024.png in Resources */,
 				4361EB011AEECDD4000AAAC0 /* Icon-40@2x.png in Resources */,
@@ -484,6 +502,7 @@
 			files = (
 				4386F1BE1AD9370000EC4112 /* AppDelegate.m in Sources */,
 				4372FCF51AEA8F86001874CA /* Message.m in Sources */,
+				43A106AA1AF9FF6100AB4745 /* MessageViewController.m in Sources */,
 				43366CF21AE7ACAE00F9ECC6 /* MultipeerConnectivityManager.m in Sources */,
 				43366CFD1AE7AE0C00F9ECC6 /* ConnectionTableViewCell.m in Sources */,
 				4386F1BF1AD9370000EC4112 /* main.m in Sources */,

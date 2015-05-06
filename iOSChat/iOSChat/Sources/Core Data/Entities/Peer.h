@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSString * peerID;
 @property (nonatomic, retain) NSNumber * state;
-@property (nonatomic, retain) NSSet *messages;
+@property (nonatomic, retain) NSSet * messages;
 @end
 
 @interface Peer (CoreDataGeneratedAccessors)

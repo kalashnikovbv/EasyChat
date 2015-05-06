@@ -15,6 +15,6 @@
 
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * text;
-@property (nonatomic, retain) Peer *sendingPeer;
+@property (nonatomic, retain) Peer * sendingPeer;
 
 @end
