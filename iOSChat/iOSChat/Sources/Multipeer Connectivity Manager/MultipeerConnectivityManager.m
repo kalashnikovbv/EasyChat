@@ -124,7 +124,7 @@ NSString * const kPeerEntityName = @"Peer";
     NSArray * allPeers = [[self session] connectedPeers];
     NSError * error = nil;
     
-    [[self session] sendData: dataToSend toPeers: allPeers withMode: MCSessionSendDataUnreliable error: &error];
+    [[self session] sendData: dataToSend toPeers: allPeers withMode: MCSessionSendDataReliable error: &error];
     
     if (nil != error)
     {

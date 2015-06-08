@@ -216,7 +216,9 @@ NSString * const kMessageCellID = @"MessageCell";
 {
     Message * message = [[self fetchedResultsController] fetchedObjects][indexPath.section];
     
-    [self.navigationController pushViewController: [self messageViewController] animated: YES];
+    //[self.navigationController pushViewController: [self messageViewController] animated: YES];
+    
+    [self presentViewController: [self messageViewController] animated: YES completion: nil];
     
     [[self messageViewController] setMessageText: message.text
                                           date: [[self dateFormatter] stringFromDate: message.date]

@@ -51,7 +51,8 @@
 
 - (IBAction) doneButtonPressed: (id) sender
 {
-    [self.navigationController popViewControllerAnimated: YES];
+//    [self.navigationController popViewControllerAnimated: YES];
+    [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle
