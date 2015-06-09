@@ -120,19 +120,27 @@ NSString * const kPeerEntityName = @"Peer";
 
 - (void) sendMessage: (NSString *) message
 {
-    NSData * dataToSend = [message dataUsingEncoding: NSUTF8StringEncoding];
     NSArray * allPeers = [[self session] connectedPeers];
-    NSError * error = nil;
     
-    [[self session] sendData: dataToSend toPeers: allPeers withMode: MCSessionSendDataReliable error: &error];
-    
-    if (nil != error)
+    if ([allPeers count] > 0)
     {
-        NSLog(@"Error sending data: %@", error.localizedDescription);
+        NSData * dataToSend = [message dataUsingEncoding: NSUTF8StringEncoding];
+        NSError * error = nil;
+    
+        [[self session] sendData: dataToSend toPeers: allPeers withMode: MCSessionSendDataReliable error: &error];
+    
+        if (nil != error)
+        {
+            NSLog(@"Error sending data: %@", error.localizedDescription);
+        }
+        else
+        {
+            [self addNewMessage: message fromPeerWithID: [self peerID]];
+        }
     }
     else
     {
-        [self addNewMessage: message fromPeerWithID: [self peerID]];
+        NSLog(@"Error: no peer to send message");
     }
 }
 

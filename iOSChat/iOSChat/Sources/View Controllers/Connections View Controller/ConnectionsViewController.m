@@ -36,6 +36,8 @@ NSString * const kConnectionCellID = @"ConnectionCell";
 {
     if (nil == _connectivityManager)
     {
+        [self view];
+        
         NSString * emptyString = [NSString stringWithFormat: @""];
         
         NSString * peerName = ([_deviceNameTextField.text isEqualToString: emptyString]) ? [[UIDevice currentDevice] name] : _deviceNameTextField.text;
